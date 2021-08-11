@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 function withTooltip(Component) {
   return class WithTooltip extends React.Component {
@@ -7,8 +7,8 @@ function withTooltip(Component) {
     mouseOut = () => this.setState({ showTooltip: false });
     render() {
       return (
-        <div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
-          <Component showTooltip={this.state.showTooltip} {...this.props} />
+        <div onMouseOut={this.mouseOut} onMouseOver={this.mouseOver}>
+          <Component {...this.props} showTooltip={this.state.showTooltip} />
         </div>
       );
     }

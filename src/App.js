@@ -3,7 +3,11 @@ import "./App.css";
 import Movie from "./hoc/Movie";
 
 function App() {
-  return <Movie id={1} />;
+  return (
+    <div>
+      <Movie />
+    </div>
+  );
 }
 
 export default App;

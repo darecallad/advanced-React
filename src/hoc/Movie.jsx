@@ -6,7 +6,7 @@ class Movie extends Component {
     return (
       <div>
         Movie
-        {this.props.showTooltip && <div>Some tool tips </div>}
+        {this.props.showTooltip && <div> Some Tips</div>}
       </div>
     );
   }
