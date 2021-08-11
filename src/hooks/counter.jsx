@@ -5,11 +5,18 @@ function Counter(props) {
   const [name, setName] = useState("");
 
   useEffect(() => {
-    document.title = `${name} has clicked ${count} times`;
+    document.title = `${name} has clicked ${count} time`;
     return () => {
-      console.log("clean up");
+      console.log("Clean up");
     };
-  }, [count]); // only count change the document.title will be updated
+  });
+
+  //   useEffect(() => {
+  //     document.title = `${name} has clicked ${count} times`;
+  //     return () => {
+  //       console.log("clean up");
+  //     };
+  //   }, [count]); // only count change the document.title will be updated
   //   componentDidMount(), componentDidUpdated(), componentWillUnmount()
   return (
     <Fragment>
