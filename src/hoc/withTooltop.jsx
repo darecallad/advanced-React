@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 function withTooltip(Component) {
   return class WithTooltip extends React.Component {
